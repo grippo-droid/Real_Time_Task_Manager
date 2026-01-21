@@ -242,6 +242,8 @@ def delete_board(
     try:
         result = boards_collection.delete_one({"_id": ObjectId(board_id)})
         if result.deleted_count == 0:
+            raise HTTPException(
+                status_code=status.HTTP_404_NOT_FOUND,
                 detail="Board not found"
             )
         
@@ -251,7 +253,7 @@ def delete_board(
             action="deleted_board",
             entity_type="board",
             entity_id=board_id,
-            details=f"Deleted board"
+            details="Deleted board"
         )
 
         return {"message": "Board deleted successfully"}

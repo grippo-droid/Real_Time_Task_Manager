@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\backend\routers\admin.py", line 2, in <module>
+    from fastapi import APIRouter, HTTPException, Depends, status
+ModuleNotFoundError: No module named 'fastapi'
