@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\debug_import.py", line 6, in <module>
+    import backend.main
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\backend\main.py", line 1, in <module>
+    from fastapi import FastAPI
+ModuleNotFoundError: No module named 'fastapi'

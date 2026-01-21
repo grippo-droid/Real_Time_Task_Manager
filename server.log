@@ -1,0 +1,1485 @@
+INFO:     Will watch for changes in these directories: ['E:\\LETS COOK\\Projects\\Real_Time_Taskmanager']
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [25556] using StatReload
+Process SpawnProcess-1:
+Traceback (most recent call last):
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\backend\database.py", line 118, in <module>
+    print("\u2705 Connected to MongoDB successfully!")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python314\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2705' in position 0: character maps to <undefined>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python314\Lib\multiprocessing\process.py", line 320, in _bootstrap
+    self.run()
+    ~~~~~~~~^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python314\Lib\multiprocessing\process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\uvicorn\_subprocess.py", line 80, in subprocess_started
+    target(sockets=sockets)
+    ~~~~~~^^^^^^^^^^^^^^^^^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\uvicorn\server.py", line 67, in run
+    return asyncio_run(self.serve(sockets=sockets), loop_factory=self.config.get_loop_factory())
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python314\Lib\asyncio\runners.py", line 204, in run
+    return runner.run(main)
+           ~~~~~~~~~~^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python314\Lib\asyncio\runners.py", line 127, in run
+    return self._loop.run_until_complete(task)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python314\Lib\asyncio\base_events.py", line 719, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\uvicorn\server.py", line 71, in serve
+    await self._serve(sockets)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\uvicorn\server.py", line 78, in _serve
+    config.load()
+    ~~~~~~~~~~~^^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\uvicorn\config.py", line 439, in load
+    self.loaded_app = import_from_string(self.app)
+                      ~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\uvicorn\importer.py", line 19, in import_from_string
+    module = importlib.import_module(module_str)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python314\Lib\importlib\__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1398, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 762, in exec_module
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\backend\main.py", line 3, in <module>
+    from backend.routers import auth, admin, team_manager, tasks, users, chat
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\backend\routers\__init__.py", line 1, in <module>
+    from . import auth, admin, team_manager, tasks,users, chat
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\backend\routers\auth.py", line 11, in <module>
+    from backend.database import users_collection
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\backend\database.py", line 120, in <module>
+    print("\u274c MongoDB connection failed:", e)
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python314\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u274c' in position 0: character maps to <undefined>
+WARNING:  StatReload detected changes in 'backend\database.py'. Reloading...
+ INFO:     Started server process [11896]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+[SUCCESS] Connected to MongoDB successfully!
+INFO:     127.0.0.1:60577 - "OPTIONS /admin/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63563 - "OPTIONS /admin/boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60577 - "OPTIONS /admin/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51211 - "OPTIONS /admin/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63563 - "OPTIONS /admin/boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60577 - "OPTIONS /admin/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60577 - "GET /admin/boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51211 - "GET /admin/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55372 - "GET /admin/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59301 - "GET /admin/boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63563 - "GET /admin/users HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 403, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        self.scope, self.receive, self.send
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\fastapi\applications.py", line 1134, in __call__
+    await super().__call__(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\applications.py", line 107, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\middleware\errors.py", line 186, in __call__
+    raise exc
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\middleware\cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\middleware\cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\fastapi\routing.py", line 125, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\fastapi\routing.py", line 111, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\fastapi\routing.py", line 391, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\fastapi\routing.py", line 292, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\concurrency.py", line 32, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\anyio\to_thread.py", line 56, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\anyio\_backends\_asyncio.py", line 2485, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\anyio\_backends\_asyncio.py", line 976, in run
+    result = context.run(func, *args)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\backend\routers\admin.py", line 242, in get_all_users
+    role=user["role"],
+         ~~~~^^^^^^^^
+KeyError: 'role'
+INFO:     127.0.0.1:59301 - "GET /admin/users HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 403, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        self.scope, self.receive, self.send
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\fastapi\applications.py", line 1134, in __call__
+    await super().__call__(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\applications.py", line 107, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\middleware\errors.py", line 186, in __call__
+    raise exc
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\middleware\cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\middleware\cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\fastapi\routing.py", line 125, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\fastapi\routing.py", line 111, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\fastapi\routing.py", line 391, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\fastapi\routing.py", line 292, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\concurrency.py", line 32, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\anyio\to_thread.py", line 56, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\anyio\_backends\_asyncio.py", line 2485, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\anyio\_backends\_asyncio.py", line 976, in run
+    result = context.run(func, *args)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\backend\routers\admin.py", line 242, in get_all_users
+    role=user["role"],
+         ~~~~^^^^^^^^
+KeyError: 'role'
+INFO:     127.0.0.1:55372 - "OPTIONS /tasks/my-boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51211 - "OPTIONS /tasks/my-tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60577 - "OPTIONS /tasks/my-boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65417 - "OPTIONS /tasks/my-tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65417 - "GET /tasks/my-boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60577 - "GET /tasks/my-tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55372 - "GET /tasks/my-tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51211 - "GET /tasks/my-boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59198 - "OPTIONS /auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59198 - "POST /auth/login HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:59389 - "POST /auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59389 - "GET /tasks/my-boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59389 - "GET /tasks/my-tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59389 - "GET /tasks/my-boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59389 - "GET /tasks/my-tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60443 - "GET /admin/boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62105 - "GET /admin/users HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 403, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        self.scope, self.receive, self.send
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\fastapi\applications.py", line 1134, in __call__
+    await super().__call__(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\applications.py", line 107, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\middleware\errors.py", line 186, in __call__
+    raise exc
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\middleware\cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\middleware\cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\fastapi\routing.py", line 125, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\fastapi\routing.py", line 111, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\fastapi\routing.py", line 391, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\fastapi\routing.py", line 292, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\concurrency.py", line 32, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\anyio\to_thread.py", line 56, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\anyio\_backends\_asyncio.py", line 2485, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\anyio\_backends\_asyncio.py", line 976, in run
+    result = context.run(func, *args)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\backend\routers\admin.py", line 242, in get_all_users
+    role=user["role"],
+         ~~~~^^^^^^^^
+KeyError: 'role'
+INFO:     127.0.0.1:59389 - "GET /admin/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55188 - "GET /admin/boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60443 - "GET /admin/users HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 403, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        self.scope, self.receive, self.send
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\fastapi\applications.py", line 1134, in __call__
+    await super().__call__(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\applications.py", line 107, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\middleware\errors.py", line 186, in __call__
+    raise exc
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\middleware\cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\middleware\cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\fastapi\routing.py", line 125, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\fastapi\routing.py", line 111, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\fastapi\routing.py", line 391, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\fastapi\routing.py", line 292, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\concurrency.py", line 32, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\anyio\to_thread.py", line 56, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\anyio\_backends\_asyncio.py", line 2485, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\anyio\_backends\_asyncio.py", line 976, in run
+    result = context.run(func, *args)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\backend\routers\admin.py", line 242, in get_all_users
+    role=user["role"],
+         ~~~~^^^^^^^^
+KeyError: 'role'
+INFO:     127.0.0.1:59389 - "GET /admin/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59839 - "OPTIONS /admin/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59839 - "POST /admin/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59839 - "GET /admin/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59839 - "GET /admin/boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59839 - "GET /admin/users HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 403, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        self.scope, self.receive, self.send
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\fastapi\applications.py", line 1134, in __call__
+    await super().__call__(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\applications.py", line 107, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\middleware\errors.py", line 186, in __call__
+    raise exc
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\middleware\cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\middleware\cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\fastapi\routing.py", line 125, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\fastapi\routing.py", line 111, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\fastapi\routing.py", line 391, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\fastapi\routing.py", line 292, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\concurrency.py", line 32, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\anyio\to_thread.py", line 56, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\anyio\_backends\_asyncio.py", line 2485, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\anyio\_backends\_asyncio.py", line 976, in run
+    result = context.run(func, *args)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\backend\routers\admin.py", line 242, in get_all_users
+    role=user["role"],
+         ~~~~^^^^^^^^
+KeyError: 'role'
+INFO:     127.0.0.1:62448 - "POST /admin/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62724 - "GET /admin/boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62448 - "GET /admin/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62724 - "GET /admin/users HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 403, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        self.scope, self.receive, self.send
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\fastapi\applications.py", line 1134, in __call__
+    await super().__call__(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\applications.py", line 107, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\middleware\errors.py", line 186, in __call__
+    raise exc
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\middleware\cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\middleware\cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\fastapi\routing.py", line 125, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\fastapi\routing.py", line 111, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\fastapi\routing.py", line 391, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\fastapi\routing.py", line 292, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\concurrency.py", line 32, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\anyio\to_thread.py", line 56, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\anyio\_backends\_asyncio.py", line 2485, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\anyio\_backends\_asyncio.py", line 976, in run
+    result = context.run(func, *args)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\backend\routers\admin.py", line 242, in get_all_users
+    role=user["role"],
+         ~~~~^^^^^^^^
+KeyError: 'role'
+WARNING:  StatReload detected changes in 'backend\routers\admin.py'. Reloading...
+ INFO:     Shutting down
+INFO:     127.0.0.1:61616 - "GET /admin/boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58349 - "GET /admin/users HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 403, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        self.scope, self.receive, self.send
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\fastapi\applications.py", line 1134, in __call__
+    await super().__call__(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\applications.py", line 107, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\middleware\errors.py", line 186, in __call__
+    raise exc
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\middleware\cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\middleware\cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\fastapi\routing.py", line 125, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\fastapi\routing.py", line 111, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\fastapi\routing.py", line 391, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\fastapi\routing.py", line 292, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\concurrency.py", line 32, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\anyio\to_thread.py", line 56, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\anyio\_backends\_asyncio.py", line 2485, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\anyio\_backends\_asyncio.py", line 976, in run
+    result = context.run(func, *args)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\backend\routers\admin.py", line 242, in get_all_users
+    role=user.get("role", "team_member"),
+         ^^^^^^^^^^^^
+KeyError: 'role'
+INFO:     Waiting for connections to close. (CTRL+C to force quit)
+INFO:     127.0.0.1:63908 - "GET /admin/teams HTTP/1.1" 200 OK
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [11896]
+INFO:     Started server process [3284]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+[SUCCESS] Connected to MongoDB successfully!
+INFO:     127.0.0.1:63350 - "GET /tasks/my-boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57489 - "GET /admin/users HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 403, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        self.scope, self.receive, self.send
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\fastapi\applications.py", line 1134, in __call__
+    await super().__call__(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\applications.py", line 107, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\middleware\errors.py", line 186, in __call__
+    raise exc
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\middleware\cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\middleware\cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\fastapi\routing.py", line 125, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\fastapi\routing.py", line 111, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\fastapi\routing.py", line 391, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\fastapi\routing.py", line 292, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\concurrency.py", line 32, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\anyio\to_thread.py", line 56, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\anyio\_backends\_asyncio.py", line 2485, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\anyio\_backends\_asyncio.py", line 976, in run
+    result = context.run(func, *args)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\backend\routers\admin.py", line 243, in get_all_users
+    created_at=user["created_at"]
+               ~~~~^^^^^^^^^^^^^^
+KeyError: 'created_at'
+INFO:     127.0.0.1:58004 - "GET /admin/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63350 - "GET /tasks/my-boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63303 - "GET /tasks/my-tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59591 - "GET /admin/boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63350 - "GET /tasks/my-tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64980 - "POST /auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64980 - "GET /tasks/my-boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64980 - "GET /tasks/my-tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64980 - "GET /tasks/my-boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64980 - "GET /tasks/my-tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63236 - "GET /admin/users HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 403, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        self.scope, self.receive, self.send
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\fastapi\applications.py", line 1134, in __call__
+    await super().__call__(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\applications.py", line 107, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\middleware\errors.py", line 186, in __call__
+    raise exc
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\middleware\cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\middleware\cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\fastapi\routing.py", line 125, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\fastapi\routing.py", line 111, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\fastapi\routing.py", line 391, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\fastapi\routing.py", line 292, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\concurrency.py", line 32, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\anyio\to_thread.py", line 56, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\anyio\_backends\_asyncio.py", line 2485, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\anyio\_backends\_asyncio.py", line 976, in run
+    result = context.run(func, *args)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\backend\routers\admin.py", line 243, in get_all_users
+    created_at=user["created_at"]
+               ~~~~^^^^^^^^^^^^^^
+KeyError: 'created_at'
+INFO:     127.0.0.1:50257 - "GET /admin/boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64980 - "GET /admin/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50257 - "GET /admin/boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54452 - "GET /admin/users HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 403, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        self.scope, self.receive, self.send
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\fastapi\applications.py", line 1134, in __call__
+    await super().__call__(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\applications.py", line 107, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\middleware\errors.py", line 186, in __call__
+    raise exc
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\middleware\cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\middleware\cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\fastapi\routing.py", line 125, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\fastapi\routing.py", line 111, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\fastapi\routing.py", line 391, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\fastapi\routing.py", line 292, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\concurrency.py", line 32, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\anyio\to_thread.py", line 56, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\anyio\_backends\_asyncio.py", line 2485, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\anyio\_backends\_asyncio.py", line 976, in run
+    result = context.run(func, *args)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\backend\routers\admin.py", line 243, in get_all_users
+    created_at=user["created_at"]
+               ~~~~^^^^^^^^^^^^^^
+KeyError: 'created_at'
+INFO:     127.0.0.1:64980 - "GET /admin/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54632 - "POST /admin/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51434 - "GET /admin/boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54632 - "GET /admin/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51434 - "GET /admin/users HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 403, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        self.scope, self.receive, self.send
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\fastapi\applications.py", line 1134, in __call__
+    await super().__call__(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\applications.py", line 107, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\middleware\errors.py", line 186, in __call__
+    raise exc
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\middleware\cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\middleware\cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\fastapi\routing.py", line 125, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\fastapi\routing.py", line 111, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\fastapi\routing.py", line 391, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\fastapi\routing.py", line 292, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\concurrency.py", line 32, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\anyio\to_thread.py", line 56, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\anyio\_backends\_asyncio.py", line 2485, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\anyio\_backends\_asyncio.py", line 976, in run
+    result = context.run(func, *args)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\backend\routers\admin.py", line 243, in get_all_users
+    created_at=user["created_at"]
+               ~~~~^^^^^^^^^^^^^^
+KeyError: 'created_at'
+WARNING:  StatReload detected changes in 'backend\routers\admin.py'. Reloading...
+ INFO:     127.0.0.1:54796 - "OPTIONS /admin/boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53283 - "OPTIONS /admin/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54796 - "OPTIONS /admin/boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53283 - "OPTIONS /admin/users HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for connections to close. (CTRL+C to force quit)
+INFO:     127.0.0.1:53283 - "GET /admin/users HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 403, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        self.scope, self.receive, self.send
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\fastapi\applications.py", line 1134, in __call__
+    await super().__call__(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\applications.py", line 107, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\middleware\errors.py", line 186, in __call__
+    raise exc
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\middleware\cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\middleware\cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\fastapi\routing.py", line 125, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\fastapi\routing.py", line 111, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\fastapi\routing.py", line 391, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\fastapi\routing.py", line 292, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\starlette\concurrency.py", line 32, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\anyio\to_thread.py", line 56, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\anyio\_backends\_asyncio.py", line 2485, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\myenv\Lib\site-packages\anyio\_backends\_asyncio.py", line 976, in run
+    result = context.run(func, *args)
+  File "E:\LETS COOK\Projects\Real_Time_Taskmanager\backend\routers\admin.py", line 243, in get_all_users
+    created_at=user.get("created_at", datetime.utcnow())
+               ^^^^^^^^^^^^^^^^^^
+KeyError: 'created_at'
+INFO:     127.0.0.1:57106 - "GET /admin/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54796 - "GET /admin/boards HTTP/1.1" 200 OK
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3284]
+INFO:     Started server process [32432]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+[SUCCESS] Connected to MongoDB successfully!
+INFO:     127.0.0.1:50587 - "OPTIONS /tasks/my-boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49380 - "OPTIONS /tasks/my-tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57271 - "OPTIONS /tasks/my-boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50587 - "OPTIONS /tasks/my-tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54734 - "GET /admin/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49380 - "GET /tasks/my-boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57271 - "GET /tasks/my-tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54734 - "GET /tasks/my-boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52461 - "GET /admin/boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50432 - "GET /admin/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49380 - "GET /tasks/my-tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49380 - "OPTIONS /auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49380 - "POST /auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49380 - "GET /tasks/my-boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50432 - "GET /tasks/my-tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52461 - "GET /tasks/my-boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49380 - "GET /tasks/my-tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52461 - "GET /admin/boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50432 - "GET /admin/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49380 - "GET /admin/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52461 - "GET /admin/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57271 - "GET /admin/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54734 - "GET /admin/boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50669 - "OPTIONS /admin/teams/6968a44df6968682e05b085f HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50669 - "DELETE /admin/teams/6968a44df6968682e05b085f HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50669 - "GET /admin/boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54387 - "OPTIONS /admin/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50669 - "GET /admin/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54387 - "GET /admin/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54387 - "OPTIONS /admin/teams/6968a28a08c0e8041e7b2c20 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54387 - "DELETE /admin/teams/6968a28a08c0e8041e7b2c20 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50669 - "GET /admin/boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51916 - "GET /admin/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54387 - "GET /admin/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54387 - "OPTIONS /admin/teams/6968a26008c0e8041e7b2c1f HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54387 - "DELETE /admin/teams/6968a26008c0e8041e7b2c1f HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51916 - "GET /admin/boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54387 - "GET /admin/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50669 - "GET /admin/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50669 - "OPTIONS /admin/teams/6968950d06211bca6aae0296 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50669 - "DELETE /admin/teams/6968950d06211bca6aae0296 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50669 - "GET /admin/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51916 - "GET /admin/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54387 - "GET /admin/boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54387 - "OPTIONS /admin/teams/696894898f68d82d563ca2f3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54387 - "DELETE /admin/teams/696894898f68d82d563ca2f3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50669 - "GET /admin/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51916 - "GET /admin/boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54387 - "GET /admin/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54387 - "OPTIONS /admin/teams/696894358f68d82d563ca2f2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54387 - "DELETE /admin/teams/696894358f68d82d563ca2f2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54387 - "GET /admin/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50669 - "GET /admin/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51916 - "GET /admin/boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51916 - "OPTIONS /admin/teams/6968940b8f68d82d563ca2f1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51916 - "DELETE /admin/teams/6968940b8f68d82d563ca2f1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54387 - "GET /admin/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51916 - "GET /admin/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50669 - "GET /admin/boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50669 - "OPTIONS /admin/teams/69689306b00b9e0729da5148 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50669 - "DELETE /admin/teams/69689306b00b9e0729da5148 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50669 - "GET /admin/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51916 - "GET /admin/boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54387 - "GET /admin/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54387 - "OPTIONS /admin/teams/696892f9b00b9e0729da5147 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54387 - "DELETE /admin/teams/696892f9b00b9e0729da5147 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51916 - "GET /admin/boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50669 - "GET /admin/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54387 - "GET /admin/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54387 - "OPTIONS /admin/teams/696892dbb00b9e0729da5146 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54387 - "DELETE /admin/teams/696892dbb00b9e0729da5146 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54387 - "GET /admin/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51916 - "GET /admin/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50669 - "GET /admin/boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50669 - "OPTIONS /admin/teams/696892b0b00b9e0729da5145 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50669 - "DELETE /admin/teams/696892b0b00b9e0729da5145 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54387 - "GET /admin/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51916 - "GET /admin/boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50669 - "GET /admin/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50669 - "OPTIONS /admin/teams/695e4a4e06e57d3144572d36 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50669 - "DELETE /admin/teams/695e4a4e06e57d3144572d36 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50669 - "GET /admin/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51916 - "GET /admin/boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54387 - "GET /admin/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54387 - "OPTIONS /admin/teams/695e3fe2154319da50cc3e58 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54387 - "DELETE /admin/teams/695e3fe2154319da50cc3e58 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54387 - "GET /admin/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51916 - "GET /admin/boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50669 - "GET /admin/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50669 - "OPTIONS /admin/teams/694cf37287c717e44d50ca30 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50669 - "DELETE /admin/teams/694cf37287c717e44d50ca30 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50669 - "GET /admin/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54387 - "GET /admin/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51916 - "GET /admin/boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51916 - "OPTIONS /admin/teams/692aed21ff747b62319344b3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51916 - "DELETE /admin/teams/692aed21ff747b62319344b3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51916 - "GET /admin/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54387 - "GET /admin/boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50669 - "GET /admin/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51407 - "OPTIONS /admin/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51407 - "POST /admin/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51407 - "GET /admin/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51407 - "GET /admin/boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51407 - "GET /admin/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51407 - "OPTIONS /admin/teams/6968a4f4eb2ecf876117050f HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51407 - "DELETE /admin/teams/6968a4f4eb2ecf876117050f HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53957 - "GET /admin/boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51407 - "GET /admin/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55192 - "GET /admin/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52390 - "POST /admin/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52390 - "GET /admin/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52390 - "GET /admin/boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55415 - "GET /admin/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50545 - "OPTIONS /admin/teams/6968a510eb2ecf8761170510 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50545 - "DELETE /admin/teams/6968a510eb2ecf8761170510 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50545 - "GET /admin/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53734 - "GET /admin/boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50545 - "GET /admin/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57680 - "POST /admin/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57680 - "GET /admin/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57680 - "GET /admin/boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57680 - "GET /admin/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61148 - "GET /tasks/my-boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62418 - "GET /tasks/my-tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62418 - "GET /tasks/my-tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61148 - "GET /tasks/my-boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55264 - "GET /admin/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57713 - "GET /admin/boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57713 - "GET /admin/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55264 - "GET /admin/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55264 - "GET /admin/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57713 - "GET /admin/boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50060 - "OPTIONS /admin/boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50060 - "POST /admin/boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50060 - "GET /admin/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55093 - "GET /admin/boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60239 - "GET /admin/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58975 - "GET /tasks/my-boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52375 - "GET /tasks/my-tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58975 - "GET /tasks/my-boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52375 - "GET /tasks/my-tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52375 - "GET /tasks/my-boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52375 - "OPTIONS /tasks/boards/6968a57aeb2ecf8761170512 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54362 - "OPTIONS /tasks/boards/6968a57aeb2ecf8761170512/tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58975 - "GET /tasks/my-boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52375 - "GET /tasks/boards/6968a57aeb2ecf8761170512/tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54362 - "GET /tasks/boards/6968a57aeb2ecf8761170512 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52375 - "GET /tasks/my-tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54362 - "GET /tasks/my-boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52375 - "GET /tasks/my-boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58975 - "GET /tasks/my-tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58975 - "GET /tasks/my-boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52375 - "GET /tasks/my-boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54362 - "GET /tasks/boards/6968a57aeb2ecf8761170512/tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58975 - "GET /tasks/boards/6968a57aeb2ecf8761170512 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58975 - "OPTIONS /chat/boards/6968a57aeb2ecf8761170512/online-users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58975 - "GET /chat/boards/6968a57aeb2ecf8761170512/online-users HTTP/1.1" 200 OK
+WARNING:  Unsupported upgrade request.
+WARNING:  No supported WebSocket library detected. Please use "pip install 'uvicorn[standard]'", or install 'websockets' or 'wsproto' manually.
+INFO:     127.0.0.1:64979 - "GET /chat/ws/6968a57aeb2ecf8761170512?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OTViYWZkZDEyMmM2NTZkZWQxZGEwZTAiLCJleHAiOjE3Njg1NTE5ODZ9.s6bIGamFL4kYX8dR_6JKkry2UkZQi1xL8Jz5D_K_0po HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:58975 - "GET /tasks/my-boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63970 - "GET /tasks/my-tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58975 - "GET /tasks/my-tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55640 - "GET /tasks/my-boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55640 - "GET /tasks/my-boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58975 - "GET /admin/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58975 - "OPTIONS /manager/boards/6968a57aeb2ecf8761170512/tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63970 - "GET /tasks/my-boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55640 - "GET /admin/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58975 - "GET /manager/boards/6968a57aeb2ecf8761170512/tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54895 - "OPTIONS /manager/tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54895 - "POST /manager/tasks HTTP/1.1" 400 Bad Request
+INFO:     127.0.0.1:54895 - "POST /manager/tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54895 - "GET /manager/boards/6968a57aeb2ecf8761170512/tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64418 - "GET /tasks/my-tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51115 - "GET /tasks/my-boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51115 - "GET /tasks/my-boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64418 - "GET /tasks/my-tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64418 - "GET /tasks/my-boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51115 - "GET /tasks/my-boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65069 - "GET /tasks/boards/6968a57aeb2ecf8761170512/tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64418 - "GET /tasks/boards/6968a57aeb2ecf8761170512 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65069 - "GET /tasks/my-tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64418 - "GET /tasks/my-boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51115 - "GET /tasks/my-tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65069 - "GET /tasks/my-boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65069 - "GET /tasks/my-tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51115 - "GET /tasks/my-tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50773 - "GET /tasks/my-boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57042 - "GET /tasks/my-tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50773 - "GET /tasks/my-boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57042 - "GET /tasks/my-tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58883 - "GET /tasks/my-boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61259 - "GET /tasks/my-boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58883 - "GET /tasks/boards/6968a57aeb2ecf8761170512 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61259 - "GET /tasks/boards/6968a57aeb2ecf8761170512/tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61259 - "GET /tasks/my-boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58883 - "GET /tasks/my-tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58511 - "GET /tasks/my-boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61259 - "GET /tasks/my-tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61259 - "GET /tasks/my-boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58883 - "GET /tasks/boards/6968a57aeb2ecf8761170512/tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61259 - "GET /tasks/my-boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58511 - "GET /tasks/boards/6968a57aeb2ecf8761170512 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58883 - "GET /tasks/boards/6968a57aeb2ecf8761170512/tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61259 - "GET /tasks/boards/6968a57aeb2ecf8761170512 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58883 - "GET /tasks/my-tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61259 - "GET /tasks/my-boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58511 - "GET /tasks/my-tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58883 - "GET /tasks/my-boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51728 - "GET /admin/boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56095 - "GET /admin/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56095 - "GET /admin/boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51728 - "GET /admin/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51728 - "GET /admin/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56095 - "GET /admin/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56095 - "GET /tasks/my-boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51728 - "GET /tasks/my-tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55741 - "GET /tasks/my-boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56095 - "GET /tasks/my-tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55741 - "GET /admin/boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51728 - "GET /admin/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56095 - "GET /admin/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63650 - "GET /admin/boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58825 - "GET /admin/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55741 - "GET /admin/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55459 - "GET /tasks/my-boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55459 - "GET /tasks/my-tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55459 - "GET /tasks/my-boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55459 - "GET /tasks/my-tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55459 - "GET /tasks/my-boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49666 - "GET /tasks/my-boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50489 - "GET /tasks/boards/6968a57aeb2ecf8761170512/tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55459 - "GET /tasks/boards/6968a57aeb2ecf8761170512 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55459 - "GET /chat/boards/6968a57aeb2ecf8761170512/online-users HTTP/1.1" 200 OK
+WARNING:  Unsupported upgrade request.
+WARNING:  No supported WebSocket library detected. Please use "pip install 'uvicorn[standard]'", or install 'websockets' or 'wsproto' manually.
+INFO:     127.0.0.1:63637 - "GET /chat/ws/6968a57aeb2ecf8761170512?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OTViYWZkZDEyMmM2NTZkZWQxZGEwZTAiLCJleHAiOjE3Njg1NTE5ODZ9.s6bIGamFL4kYX8dR_6JKkry2UkZQi1xL8Jz5D_K_0po HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:52028 - "GET /tasks/my-boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55889 - "GET /tasks/my-tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52028 - "GET /tasks/my-boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55889 - "GET /tasks/my-tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52028 - "GET /admin/boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55889 - "GET /admin/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60107 - "GET /admin/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49751 - "GET /admin/boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65383 - "GET /admin/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52028 - "GET /admin/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63463 - "GET /tasks/my-boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62667 - "GET /tasks/my-tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63463 - "GET /tasks/my-boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62667 - "GET /tasks/my-tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62667 - "GET /tasks/my-boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63463 - "GET /tasks/my-boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52751 - "GET /tasks/boards/6968a57aeb2ecf8761170512/tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62667 - "GET /tasks/boards/6968a57aeb2ecf8761170512 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59026 - "GET /chat/boards/6968a57aeb2ecf8761170512/online-users HTTP/1.1" 200 OK
+WARNING:  Unsupported upgrade request.
+WARNING:  No supported WebSocket library detected. Please use "pip install 'uvicorn[standard]'", or install 'websockets' or 'wsproto' manually.
+INFO:     127.0.0.1:53363 - "GET /chat/ws/6968a57aeb2ecf8761170512?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OTViYWZkZDEyMmM2NTZkZWQxZGEwZTAiLCJleHAiOjE3Njg1NTE5ODZ9.s6bIGamFL4kYX8dR_6JKkry2UkZQi1xL8Jz5D_K_0po HTTP/1.1" 404 Not Found
+WARNING:  StatReload detected changes in 'backend\routers\chat.py'. Reloading...
+ INFO:     127.0.0.1:58594 - "OPTIONS /tasks/my-boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54834 - "OPTIONS /tasks/my-boards HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     127.0.0.1:54834 - "GET /tasks/my-boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61204 - "GET /tasks/boards/6968a57aeb2ecf8761170512/tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54790 - "GET /tasks/boards/6968a57aeb2ecf8761170512 HTTP/1.1" 200 OK
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [32432]
+INFO:     Started server process [33264]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  Unsupported upgrade request.
+WARNING:  No supported WebSocket library detected. Please use "pip install 'uvicorn[standard]'", or install 'websockets' or 'wsproto' manually.
+[SUCCESS] Connected to MongoDB successfully!
+INFO:     127.0.0.1:63483 - "GET /chat/ws/6968a57aeb2ecf8761170512?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OTViYWZkZDEyMmM2NTZkZWQxZGEwZTAiLCJleHAiOjE3Njg1NTE5ODZ9.s6bIGamFL4kYX8dR_6JKkry2UkZQi1xL8Jz5D_K_0po HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:56697 - "GET /chat/boards/6968a57aeb2ecf8761170512/online-users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56988 - "GET /tasks/boards/6968a57aeb2ecf8761170512 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56861 - "GET /tasks/my-boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64150 - "GET /tasks/boards/6968a57aeb2ecf8761170512/tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56861 - "OPTIONS /tasks/my-tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56988 - "OPTIONS /tasks/my-tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56988 - "GET /tasks/my-tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64150 - "GET /tasks/my-boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56861 - "GET /tasks/my-tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56988 - "GET /tasks/my-boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56988 - "OPTIONS /auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56988 - "POST /auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56988 - "GET /tasks/my-boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56861 - "GET /tasks/my-tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56988 - "GET /tasks/my-tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64150 - "GET /tasks/my-boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56861 - "OPTIONS /admin/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59674 - "OPTIONS /admin/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56988 - "GET /admin/boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64150 - "GET /admin/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59674 - "GET /admin/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56861 - "GET /admin/boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56988 - "GET /admin/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64150 - "GET /admin/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56988 - "GET /tasks/my-tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64150 - "GET /tasks/my-boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56861 - "GET /tasks/my-tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56988 - "GET /tasks/my-boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56988 - "GET /tasks/my-boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56861 - "GET /tasks/my-boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64150 - "GET /tasks/boards/6968a57aeb2ecf8761170512/tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56988 - "GET /tasks/boards/6968a57aeb2ecf8761170512 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56988 - "GET /chat/boards/6968a57aeb2ecf8761170512/online-users HTTP/1.1" 200 OK
+WARNING:  Unsupported upgrade request.
+WARNING:  No supported WebSocket library detected. Please use "pip install 'uvicorn[standard]'", or install 'websockets' or 'wsproto' manually.
+INFO:     127.0.0.1:50747 - "GET /chat/ws/6968a57aeb2ecf8761170512?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OTViYWZkZDEyMmM2NTZkZWQxZGEwZTAiLCJleHAiOjE3Njg1NTI2NTB9.oGe9D57ZZChj8ZP9QXQg0MAIyG662x0Be--Z-wWPkHY HTTP/1.1" 404 Not Found
+WARNING:  StatReload detected changes in 'backend\routers\chat.py'. Reloading...
+ INFO:     127.0.0.1:53447 - "OPTIONS /tasks/boards/6968a57aeb2ecf8761170512 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52077 - "OPTIONS /tasks/boards/6968a57aeb2ecf8761170512/tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53447 - "OPTIONS /tasks/boards/6968a57aeb2ecf8761170512 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51073 - "OPTIONS /tasks/boards/6968a57aeb2ecf8761170512/tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62590 - "GET /tasks/my-boards HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     127.0.0.1:53447 - "GET /tasks/boards/6968a57aeb2ecf8761170512/tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51073 - "GET /tasks/boards/6968a57aeb2ecf8761170512 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52077 - "GET /tasks/my-boards HTTP/1.1" 200 OK
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [33264]
+INFO:     Started server process [26516]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+[SUCCESS] Connected to MongoDB successfully!
+INFO:     127.0.0.1:52965 - "GET /tasks/boards/6968a57aeb2ecf8761170512 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52965 - "OPTIONS /chat/boards/6968a57aeb2ecf8761170512/online-users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52965 - "GET /chat/boards/6968a57aeb2ecf8761170512/online-users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50097 - "GET /tasks/boards/6968a57aeb2ecf8761170512/tasks HTTP/1.1" 200 OK
+WARNING:  Unsupported upgrade request.
+WARNING:  No supported WebSocket library detected. Please use "pip install 'uvicorn[standard]'", or install 'websockets' or 'wsproto' manually.
+INFO:     127.0.0.1:50415 - "GET /chat/ws/6968a57aeb2ecf8761170512?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OTViYWZkZDEyMmM2NTZkZWQxZGEwZTAiLCJleHAiOjE3Njg1NTI2NTB9.oGe9D57ZZChj8ZP9QXQg0MAIyG662x0Be--Z-wWPkHY HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:54847 - "GET /tasks/my-boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54847 - "GET /tasks/my-tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54847 - "GET /tasks/my-boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54847 - "GET /tasks/my-tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54847 - "POST /auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54816 - "GET /tasks/my-tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54847 - "GET /tasks/my-boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61253 - "GET /tasks/my-tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54816 - "GET /tasks/my-boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54816 - "GET /tasks/my-boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54847 - "GET /tasks/boards/6968a57aeb2ecf8761170512/tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54816 - "GET /tasks/boards/6968a57aeb2ecf8761170512 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61253 - "GET /tasks/my-boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52567 - "GET /chat/boards/6968a57aeb2ecf8761170512/online-users HTTP/1.1" 200 OK
+WARNING:  Unsupported upgrade request.
+WARNING:  No supported WebSocket library detected. Please use "pip install 'uvicorn[standard]'", or install 'websockets' or 'wsproto' manually.
+INFO:     127.0.0.1:60599 - "GET /chat/ws/6968a57aeb2ecf8761170512?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OTViYWZkZDEyMmM2NTZkZWQxZGEwZTAiLCJleHAiOjE3Njg1NTI4MjZ9.0lYgabh38VmLzKn7C8CVU-fQvLEWaOW-OvPuEkt5TOg HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:63302 - "GET /tasks/my-boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52267 - "GET /tasks/boards/6968a57aeb2ecf8761170512/tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51529 - "GET /tasks/boards/6968a57aeb2ecf8761170512 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63302 - "GET /tasks/my-boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52267 - "GET /tasks/boards/6968a57aeb2ecf8761170512/tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53325 - "GET /tasks/boards/6968a57aeb2ecf8761170512 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53325 - "GET /chat/boards/6968a57aeb2ecf8761170512/online-users HTTP/1.1" 200 OK
+WARNING:  Unsupported upgrade request.
+WARNING:  No supported WebSocket library detected. Please use "pip install 'uvicorn[standard]'", or install 'websockets' or 'wsproto' manually.
+INFO:     127.0.0.1:55951 - "GET /chat/ws/6968a57aeb2ecf8761170512?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OTViYWZkZDEyMmM2NTZkZWQxZGEwZTAiLCJleHAiOjE3Njg1NTI4MjZ9.0lYgabh38VmLzKn7C8CVU-fQvLEWaOW-OvPuEkt5TOg HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:51154 - "GET /tasks/my-tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50736 - "GET /tasks/my-boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50736 - "GET /tasks/my-boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51154 - "GET /tasks/my-tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51154 - "POST /auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50736 - "GET /tasks/my-tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51154 - "GET /tasks/my-boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50736 - "GET /tasks/my-boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54664 - "GET /tasks/my-tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55407 - "GET /tasks/my-boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55407 - "GET /tasks/my-boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55407 - "GET /tasks/boards/6968a57aeb2ecf8761170512 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55407 - "GET /tasks/boards/6968a57aeb2ecf8761170512/tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55407 - "GET /chat/boards/6968a57aeb2ecf8761170512/online-users HTTP/1.1" 200 OK
+WARNING:  Unsupported upgrade request.
+WARNING:  No supported WebSocket library detected. Please use "pip install 'uvicorn[standard]'", or install 'websockets' or 'wsproto' manually.
+INFO:     127.0.0.1:53654 - "GET /chat/ws/6968a57aeb2ecf8761170512?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OTViYWZkZDEyMmM2NTZkZWQxZGEwZTAiLCJleHAiOjE3Njg1NTMxMDJ9.Y0ZouTcGxI-XoQAbRXGuHMdGZw1whNZsnxJredlcqWo HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:62772 - "OPTIONS /tasks/my-boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53594 - "OPTIONS /tasks/boards/6968a57aeb2ecf8761170512/tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54192 - "OPTIONS /tasks/boards/6968a57aeb2ecf8761170512 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63319 - "OPTIONS /tasks/boards/6968a57aeb2ecf8761170512/tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62943 - "OPTIONS /tasks/boards/6968a57aeb2ecf8761170512 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55716 - "OPTIONS /tasks/my-boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63319 - "GET /tasks/my-boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55716 - "GET /tasks/boards/6968a57aeb2ecf8761170512/tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54192 - "GET /tasks/my-boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62943 - "GET /tasks/boards/6968a57aeb2ecf8761170512 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63319 - "GET /tasks/boards/6968a57aeb2ecf8761170512/tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55716 - "GET /tasks/boards/6968a57aeb2ecf8761170512 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55716 - "OPTIONS /chat/boards/6968a57aeb2ecf8761170512/online-users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55716 - "GET /chat/boards/6968a57aeb2ecf8761170512/online-users HTTP/1.1" 200 OK
+WARNING:  Unsupported upgrade request.
+WARNING:  No supported WebSocket library detected. Please use "pip install 'uvicorn[standard]'", or install 'websockets' or 'wsproto' manually.
+INFO:     127.0.0.1:55566 - "GET /chat/ws/6968a57aeb2ecf8761170512?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OTViYWZkZDEyMmM2NTZkZWQxZGEwZTAiLCJleHAiOjE3Njg1NTMxMDJ9.Y0ZouTcGxI-XoQAbRXGuHMdGZw1whNZsnxJredlcqWo HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:64890 - "OPTIONS /tasks/my-tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58626 - "OPTIONS /tasks/my-tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65075 - "GET /tasks/my-boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58626 - "GET /tasks/my-tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64890 - "GET /tasks/my-boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65075 - "GET /tasks/my-tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65075 - "OPTIONS /auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65075 - "POST /auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65075 - "GET /tasks/my-boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64890 - "GET /tasks/my-tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65075 - "GET /tasks/my-tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58626 - "GET /tasks/my-boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58626 - "GET /tasks/my-boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65075 - "GET /tasks/my-boards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64890 - "GET /tasks/boards/6968a57aeb2ecf8761170512/tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58626 - "GET /tasks/boards/6968a57aeb2ecf8761170512 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58626 - "GET /chat/boards/6968a57aeb2ecf8761170512/online-users HTTP/1.1" 200 OK
+WARNING:  Unsupported upgrade request.
+WARNING:  No supported WebSocket library detected. Please use "pip install 'uvicorn[standard]'", or install 'websockets' or 'wsproto' manually.
+INFO:     127.0.0.1:55208 - "GET /chat/ws/6968a57aeb2ecf8761170512?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OTViYWZkZDEyMmM2NTZkZWQxZGEwZTAiLCJleHAiOjE3Njg1NTM1MTZ9.0TxChKuk-dAOCB3z2RlhbQzh7vkavGYNv3MvZd63Jgo HTTP/1.1" 404 Not Found
