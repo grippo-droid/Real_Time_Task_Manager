@@ -11,12 +11,28 @@ import {
 } from '@dnd-kit/core';
 import { sortableKeyboardCoordinates } from '@dnd-kit/sortable';
 import { KanbanColumn } from './KanbanColumn';
+
 import { SortableTask } from './SortableTask';
+import { TaskFilters } from './TaskFilters';
+import { TaskDetailModal } from './TaskDetailModal';
 
 const COLUMNS = ['todo', 'in_progress', 'review', 'completed'];
 
 export const KanbanBoard = ({ tasks, onTaskDrop, currentUserId }) => {
     const [activeId, setActiveId] = useState(null);
+    const [selectedTask, setSelectedTask] = useState(null);
+    const [filterQuery, setFilterQuery] = useState('');
+    const [filterPriority, setFilterPriority] = useState('all');
+
+    // Filter tasks
+    const filteredTasks = tasks.filter(task => {
+        const matchesQuery = (
+            task.title.toLowerCase().includes(filterQuery.toLowerCase()) ||
+            (task.description && task.description.toLowerCase().includes(filterQuery.toLowerCase()))
+        );
+        const matchesPriority = filterPriority === 'all' || task.priority === filterPriority;
+        return matchesQuery && matchesPriority;
+    });
 
     const sensors = useSensors(
         useSensor(PointerSensor, {
@@ -71,7 +87,7 @@ export const KanbanBoard = ({ tasks, onTaskDrop, currentUserId }) => {
 
     // Group tasks by status
     const tasksByStatus = COLUMNS.reduce((acc, status) => {
-        acc[status] = tasks.filter(t => t.status === status);
+        acc[status] = filteredTasks.filter(t => t.status === status);
         return acc;
     }, {});
 
@@ -85,7 +101,17 @@ export const KanbanBoard = ({ tasks, onTaskDrop, currentUserId }) => {
             onDragStart={handleDragStart}
             onDragEnd={handleDragEnd}
         >
-            <div className="flex-1 overflow-x-auto p-4 sm:p-6 lg:p-8 h-full">
+            <div className="flex-1 overflow-x-auto p-4 sm:p-6 lg:p-8 h-full flex flex-col gap-6">
+                <TaskFilters
+                    filterQuery={filterQuery}
+                    setFilterQuery={setFilterQuery}
+                    filterPriority={filterPriority}
+                    setFilterPriority={setFilterPriority}
+                    onClear={() => {
+                        setFilterQuery('');
+                        setFilterPriority('all');
+                    }}
+                />
                 <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 min-w-max h-full items-start">
                     {COLUMNS.map((status) => (
                         <KanbanColumn
@@ -94,6 +120,7 @@ export const KanbanBoard = ({ tasks, onTaskDrop, currentUserId }) => {
                             title={status}
                             tasks={tasksByStatus[status]}
                             currentUserId={currentUserId}
+                            onTaskClick={setSelectedTask}
                         />
                     ))}
                 </div>
@@ -106,6 +133,13 @@ export const KanbanBoard = ({ tasks, onTaskDrop, currentUserId }) => {
                     </div>
                 ) : null}
             </DragOverlay>
+
+            <TaskDetailModal
+                task={selectedTask}
+                isOpen={!!selectedTask}
+                onClose={() => setSelectedTask(null)}
+                currentUserId={currentUserId}
+            />
         </DndContext>
     );
 };

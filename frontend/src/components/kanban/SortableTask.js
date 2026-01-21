@@ -2,8 +2,9 @@
 import React from 'react';
 import { useSortable } from '@dnd-kit/sortable';
 import { CSS } from '@dnd-kit/utilities';
+import { Avatar } from '../Avatar';
 
-export const SortableTask = ({ task, currentUserId }) => {
+export const SortableTask = ({ task, currentUserId, onClick }) => {
     const {
         attributes,
         listeners,
@@ -14,7 +15,7 @@ export const SortableTask = ({ task, currentUserId }) => {
     } = useSortable({ id: task.id });
 
     const style = {
-        transform: CSS.Transform.toString(transform),
+        transform: CSS.Translate.toString(transform),
         transition,
         opacity: isDragging ? 0.5 : 1,
     };
@@ -31,8 +32,8 @@ export const SortableTask = ({ task, currentUserId }) => {
             ref={setNodeRef}
             style={style}
             {...attributes}
-            {...attributes}
             {...listeners}
+            onClick={onClick}
             className={`bg-white dark:bg-gray-700 rounded-lg p-4 shadow-sm hover:shadow-md transition border-l-4 border-transparent hover:border-indigo-500 cursor-grab active:cursor-grabbing mb-3 touch-none`}
         >
             <h4 className="font-medium text-gray-900 dark:text-white mb-2">{task.title}</h4>
@@ -47,8 +48,10 @@ export const SortableTask = ({ task, currentUserId }) => {
                 >
                     {task.priority || 'medium'}
                 </span>
-                {task.assigned_to === currentUserId && (
-                    <div className="w-2 h-2 rounded-full bg-indigo-500" title="Assigned to you" />
+                {task.assigned_to && (
+                    <div title={`Assigned to ${task.assigned_to === currentUserId ? 'You' : 'User ' + task.assigned_to.substr(0, 4)}`}>
+                        <Avatar user={{ username: task.assigned_to }} size="xs" />
+                    </div>
                 )}
             </div>
         </div>

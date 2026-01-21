@@ -66,7 +66,8 @@ def get_current_user(credentials: HTTPAuthorizationCredentials = Depends(securit
         "id": str(user["_id"]),
         "username": user["username"],
         "email": user["email"],
-        "role": user["role"]
+        "role": user["role"],
+        "avatar_url": user.get("avatar_url")
     }
 
 def require_role(required_roles: list):

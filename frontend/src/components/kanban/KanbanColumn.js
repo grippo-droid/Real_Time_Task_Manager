@@ -4,7 +4,7 @@ import { useDroppable } from '@dnd-kit/core';
 import { SortableContext, verticalListSortingStrategy } from '@dnd-kit/sortable';
 import { SortableTask } from './SortableTask';
 
-export const KanbanColumn = ({ id, title, tasks, currentUserId }) => {
+export const KanbanColumn = ({ id, title, tasks, currentUserId, onTaskClick }) => {
     const { setNodeRef } = useDroppable({ id });
 
     return (
@@ -29,6 +29,7 @@ export const KanbanColumn = ({ id, title, tasks, currentUserId }) => {
                             key={task.id}
                             task={task}
                             currentUserId={currentUserId}
+                            onClick={() => onTaskClick(task)}
                         />
                     ))}
                 </SortableContext>

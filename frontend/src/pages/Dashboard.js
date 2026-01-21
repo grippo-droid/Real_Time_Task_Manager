@@ -9,6 +9,7 @@ import {
   Settings, Plus, TrendingUp, Clock, CheckCircle
 } from 'lucide-react';
 import { ThemeToggle } from '../components/ThemeToggle';
+import { Avatar } from '../components/Avatar';
 import ActivityFeed from '../components/ActivityFeed';
 
 const Dashboard = () => {
@@ -89,14 +90,19 @@ const Dashboard = () => {
       <header className="bg-white dark:bg-gray-800 shadow-sm border-b border-gray-200 dark:border-gray-700">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex items-center justify-between">
-            <div>
-              <h1 className="text-2xl font-bold text-gray-900 dark:text-white">Task Manager</h1>
-              <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
-                Welcome back, {user?.username}!
-                <span className="ml-2 px-2 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-200 text-xs rounded-full">
-                  {user?.role?.replace('_', ' ')}
-                </span>
-              </p>
+            <div className="flex items-center gap-4">
+              <button onClick={() => navigate('/profile')} className="focus:outline-none">
+                <Avatar user={user} size="md" className="ring-2 ring-indigo-100 dark:ring-indigo-900 hover:ring-indigo-300 transition" />
+              </button>
+              <div>
+                <h1 className="text-2xl font-bold text-gray-900 dark:text-white">Task Manager</h1>
+                <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                  Welcome back, {user?.username}!
+                  <span className="ml-2 px-2 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-200 text-xs rounded-full">
+                    {user?.role?.replace('_', ' ')}
+                  </span>
+                </p>
+              </div>
             </div>
             <div className="flex items-center gap-4">
               <ThemeToggle />

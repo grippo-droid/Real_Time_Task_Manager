@@ -81,8 +81,18 @@ export const managerAPI = {
 export const tasksAPI = {
   getMyTasks: () => api.get('/tasks/my-tasks'),
   getBoardTasks: (boardId) => api.get(`/tasks/boards/${boardId}/tasks`),
-  getTask: (id) => api.get(`/tasks/tasks/${id}`),
-  updateTaskStatus: (id, status) => api.put(`/tasks/tasks/${id}/status`, { status }),
+  getTask: (id) => api.get(`/tasks/${id}`),
+  updateTaskStatus: (taskId, status) => api.put(`/tasks/${taskId}/status`, { status }),
+
+  // Comments
+  getComments: (taskId) => api.get(`/tasks/${taskId}/comments`),
+  createComment: (taskId, content) => api.post(`/tasks/${taskId}/comments`, { task_id: taskId, content }),
+  deleteComment: (taskId, commentId) => api.delete(`/tasks/${taskId}/comments/${commentId}`),
+
+  // Attachments
+  getAttachments: (taskId) => api.get(`/tasks/${taskId}/attachments`),
+  uploadAttachment: (taskId, formData) => api.post(`/tasks/${taskId}/attachments`, formData),
+
   getMyBoards: () => api.get('/tasks/my-boards'),
   getBoardDetails: (id) => api.get(`/tasks/boards/${id}`),
 };

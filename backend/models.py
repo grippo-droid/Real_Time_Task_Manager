@@ -37,11 +37,16 @@ class LoginModel(BaseModel):
     email: EmailStr
     password: str
 
+class UserUpdate(BaseModel):
+    avatar_url: Optional[str] = None
+    password: Optional[str] = Field(None, min_length=6, max_length=72)
+
 class UserResponse(BaseModel):
     id: str
     username: str
     email: EmailStr
     role: UserRole
+    avatar_url: Optional[str] = None
     created_at: datetime
 
 class TokenResponse(BaseModel):
@@ -131,12 +136,23 @@ class CommentResponse(BaseModel):
     task_id: str
     user_id: str
     username: str
+    avatar_url: Optional[str] = None
     content: str
     created_at: datetime
 
 # -----------------------
-# Chat Message Models
+# Attachment Models
 # -----------------------
+class AttachmentResponse(BaseModel):
+    id: str
+    task_id: str
+    user_id: str
+    username: str
+    filename: str
+    file_path: str  # URL path like /static/uploads/...
+    file_type: str
+    file_size: int
+    created_at: datetime
 class ChatMessage(BaseModel):
     board_id: str
     user_id: str

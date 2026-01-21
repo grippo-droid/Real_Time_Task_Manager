@@ -131,6 +131,8 @@ if use_mock:
     chats_collection = _MockCollection()
     history_collection = _MockCollection()
     activity_logs_collection = _MockCollection()
+    comments_collection = _MockCollection()
+    attachments_collection = _MockCollection()
 else:
     users_collection = db["users"]
     teams_collection = db["teams"]
@@ -138,4 +140,7 @@ else:
     tasks_collection = db["tasks"]
     chats_collection = db["chats"]
     history_collection = db["history"]
+    history_collection = db["history"]
     activity_logs_collection = db["activity_logs"]
+    comments_collection = db["comments"]
+    attachments_collection = db["attachments"]

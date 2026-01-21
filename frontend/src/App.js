@@ -11,6 +11,7 @@ import AdminPanel from './pages/AdminPanel';
 import ManagerPanel from './pages/ManagerPanel';
 import BoardView from './pages/BoardView';
 import MyTasks from './pages/MyTasks';
+import { ProfileSettings } from './pages/ProfileSettings';
 
 // Protected Route Component
 const ProtectedRoute = ({ children }) => {
@@ -87,6 +88,11 @@ function App() {
             <Route path="/tasks" element={
               <ProtectedRoute>
                 <MyTasks />
+              </ProtectedRoute>
+            } />
+            <Route path="/profile" element={
+              <ProtectedRoute>
+                <ProfileSettings />
               </ProtectedRoute>
             } />
             <Route path="/" element={<Navigate to="/dashboard" />} />

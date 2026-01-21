@@ -1,5 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
+import os
 from backend.routers import auth, admin, team_manager, tasks, users, chat, activity
 
 app = FastAPI(
@@ -29,4 +31,12 @@ app.include_router(team_manager.router, prefix="/manager", tags=["Team Manager"]
 app.include_router(tasks.router, prefix="/tasks", tags=["Tasks"])
 app.include_router(users.router, prefix="/users", tags=["Users"])
 app.include_router(chat.router, prefix="/chat", tags=["Chat"])
+
 app.include_router(activity.router, prefix="/activity", tags=["Activity"])
+
+# Create uploads directory if it doesn't exist
+if not os.path.exists("uploads"):
+    os.makedirs("uploads")
+
+# Mount uploads directory
+app.mount("/static/uploads", StaticFiles(directory="uploads"), name="uploads")

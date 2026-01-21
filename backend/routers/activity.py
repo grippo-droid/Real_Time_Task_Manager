@@ -7,7 +7,6 @@ from datetime import datetime
 from bson import ObjectId
 
 router = APIRouter(
-    prefix="/activity",
     tags=["activity"]
 )
 
