@@ -5,7 +5,7 @@ import { useAuth } from '../context/AuthContext';
 import { adminAPI } from '../services/api';
 import toast from 'react-hot-toast';
 import {
-  Users, Layout, Plus, Trash2,
+  Users, Plus, Trash2,
   ArrowLeft, Shield, Calendar
 } from 'lucide-react';
 import { ThemeToggle } from '../components/ThemeToggle';

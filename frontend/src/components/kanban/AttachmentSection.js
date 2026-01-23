@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { tasksAPI } from '../../services/api';
-import { Paperclip, File as FileIcon, Download, Trash2, Image as ImageIcon } from 'lucide-react';
+import { Paperclip, File as FileIcon, Download, Image as ImageIcon } from 'lucide-react';
 import { formatDistanceToNow } from 'date-fns';
 import toast from 'react-hot-toast';
 
@@ -12,6 +12,7 @@ export const AttachmentSection = ({ taskId }) => {
 
     useEffect(() => {
         loadAttachments();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [taskId]);
 
     const loadAttachments = async () => {
