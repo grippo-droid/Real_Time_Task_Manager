@@ -8,7 +8,7 @@ import { ArrowLeft, Calendar, Flag, CheckCircle2, Clock } from 'lucide-react';
 
 const MyTasks = () => {
   const navigate = useNavigate();
-  const { user } = useAuth();
+  useAuth();
   const [tasks, setTasks] = useState([]);
   const [loading, setLoading] = useState(true);
   const [filter, setFilter] = useState('all'); // all, todo, in_progress, completed
@@ -38,8 +38,8 @@ const MyTasks = () => {
     }
   };
 
-  const filteredTasks = filter === 'all' 
-    ? tasks 
+  const filteredTasks = filter === 'all'
+    ? tasks
     : tasks.filter(task => task.status === filter);
 
   const getStatusColor = (status) => {
@@ -111,7 +111,7 @@ const MyTasks = () => {
               <CheckCircle2 className="w-8 h-8 text-gray-400" />
             </div>
           </div>
-          
+
           <div className="bg-white rounded-xl shadow-md p-4">
             <div className="flex items-center justify-between">
               <div>
@@ -121,7 +121,7 @@ const MyTasks = () => {
               <Clock className="w-8 h-8 text-gray-400" />
             </div>
           </div>
-          
+
           <div className="bg-white rounded-xl shadow-md p-4">
             <div className="flex items-center justify-between">
               <div>
@@ -131,7 +131,7 @@ const MyTasks = () => {
               <Clock className="w-8 h-8 text-blue-400" />
             </div>
           </div>
-          
+
           <div className="bg-white rounded-xl shadow-md p-4">
             <div className="flex items-center justify-between">
               <div>
@@ -148,41 +148,37 @@ const MyTasks = () => {
           <div className="flex gap-2 overflow-x-auto">
             <button
               onClick={() => setFilter('all')}
-              className={`px-4 py-2 rounded-lg font-medium transition whitespace-nowrap ${
-                filter === 'all'
+              className={`px-4 py-2 rounded-lg font-medium transition whitespace-nowrap ${filter === 'all'
                   ? 'bg-indigo-600 text-white'
                   : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-              }`}
+                }`}
             >
               All ({stats.total})
             </button>
             <button
               onClick={() => setFilter('todo')}
-              className={`px-4 py-2 rounded-lg font-medium transition whitespace-nowrap ${
-                filter === 'todo'
+              className={`px-4 py-2 rounded-lg font-medium transition whitespace-nowrap ${filter === 'todo'
                   ? 'bg-indigo-600 text-white'
                   : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-              }`}
+                }`}
             >
               To Do ({stats.todo})
             </button>
             <button
               onClick={() => setFilter('in_progress')}
-              className={`px-4 py-2 rounded-lg font-medium transition whitespace-nowrap ${
-                filter === 'in_progress'
+              className={`px-4 py-2 rounded-lg font-medium transition whitespace-nowrap ${filter === 'in_progress'
                   ? 'bg-indigo-600 text-white'
                   : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-              }`}
+                }`}
             >
               In Progress ({stats.in_progress})
             </button>
             <button
               onClick={() => setFilter('completed')}
-              className={`px-4 py-2 rounded-lg font-medium transition whitespace-nowrap ${
-                filter === 'completed'
+              className={`px-4 py-2 rounded-lg font-medium transition whitespace-nowrap ${filter === 'completed'
                   ? 'bg-indigo-600 text-white'
                   : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-              }`}
+                }`}
             >
               Completed ({stats.completed})
             </button>
@@ -195,7 +191,7 @@ const MyTasks = () => {
             <div className="bg-white rounded-xl shadow-md p-12 text-center">
               <CheckCircle2 className="w-16 h-16 text-gray-300 mx-auto mb-4" />
               <p className="text-gray-500 text-lg">
-                {filter === 'all' 
+                {filter === 'all'
                   ? 'No tasks assigned to you yet'
                   : `No ${filter.replace('_', ' ')} tasks`
                 }
@@ -213,17 +209,17 @@ const MyTasks = () => {
                       {task.title}
                     </h3>
                     <p className="text-gray-600 mb-3">{task.description || 'No description'}</p>
-                    
+
                     <div className="flex flex-wrap items-center gap-3">
                       <span className={`px-3 py-1 text-sm font-medium rounded-full ${getStatusColor(task.status)}`}>
                         {task.status.replace('_', ' ')}
                       </span>
-                      
+
                       <div className={`flex items-center gap-1 ${getPriorityColor(task.priority)}`}>
                         <Flag className="w-4 h-4" />
                         <span className="text-sm font-medium capitalize">{task.priority}</span>
                       </div>
-                      
+
                       {task.due_date && (
                         <div className="flex items-center gap-1 text-gray-600">
                           <Calendar className="w-4 h-4" />
@@ -234,7 +230,7 @@ const MyTasks = () => {
                       )}
                     </div>
                   </div>
-                  
+
                   {task.status !== 'completed' && (
                     <select
                       value={task.status}

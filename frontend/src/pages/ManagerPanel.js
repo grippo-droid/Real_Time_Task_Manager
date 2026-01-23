@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { managerAPI, tasksAPI, adminAPI } from '../services/api';
 import toast from 'react-hot-toast';
-import { ArrowLeft, Plus, Edit, Trash2, User, Calendar, Flag } from 'lucide-react';
+import { ArrowLeft, Plus, Edit, Trash2, User, Calendar } from 'lucide-react';
 import { ThemeToggle } from '../components/ThemeToggle';
 
 const ManagerPanel = () => {
@@ -35,12 +35,14 @@ const ManagerPanel = () => {
     }
     loadBoards();
     loadUsers();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
     if (selectedBoard) {
       loadTasks();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedBoard]);
 
   const loadBoards = async () => {

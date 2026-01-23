@@ -6,7 +6,7 @@ import { tasksAPI } from '../services/api';
 import toast from 'react-hot-toast';
 import {
   LayoutDashboard, Users, ListTodo, LogOut,
-  Settings, Plus, TrendingUp, Clock, CheckCircle
+  TrendingUp, Clock, CheckCircle
 } from 'lucide-react';
 import { ThemeToggle } from '../components/ThemeToggle';
 import { Avatar } from '../components/Avatar';

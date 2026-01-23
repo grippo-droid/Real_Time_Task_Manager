@@ -8,7 +8,7 @@ import toast from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom';
 
 export const ProfileSettings = () => {
-    const { user, login } = useAuth(); // We might need a way to update user in context
+    const { user } = useAuth(); // We might need a way to update user in context
     const navigate = useNavigate();
     const [loading, setLoading] = useState(false);
 
