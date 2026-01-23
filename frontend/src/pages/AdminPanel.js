@@ -5,8 +5,8 @@ import { useAuth } from '../context/AuthContext';
 import { adminAPI } from '../services/api';
 import toast from 'react-hot-toast';
 import {
-  Users, Layout, UserPlus, Plus, Trash2, Edit,
-  ArrowLeft, Shield, Mail, Calendar
+  Users, Layout, Plus, Trash2,
+  ArrowLeft, Shield, Calendar
 } from 'lucide-react';
 import { ThemeToggle } from '../components/ThemeToggle';
 
@@ -37,6 +37,7 @@ const AdminPanel = () => {
       return;
     }
     loadData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const loadData = async () => {

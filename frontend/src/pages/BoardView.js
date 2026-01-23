@@ -13,7 +13,6 @@ const BoardView = () => {
   const navigate = useNavigate();
   const { user } = useAuth();
   const [board, setBoard] = useState(null);
-  const [boards, setBoards] = useState([]);
   const [tasks, setTasks] = useState([]);
   const [loading, setLoading] = useState(true);
   const [showChat, setShowChat] = useState(false);
@@ -27,12 +26,14 @@ const BoardView = () => {
 
   useEffect(() => {
     loadBoards();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
     if (boardId) {
       loadBoardData();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [boardId]);
 
   useEffect(() => {
@@ -50,7 +51,6 @@ const BoardView = () => {
   const loadBoards = async () => {
     try {
       const response = await tasksAPI.getMyBoards();
-      setBoards(response.data);
       if (!boardId && response.data.length > 0) {
         navigate(`/boards/${response.data[0].id}`);
       }
