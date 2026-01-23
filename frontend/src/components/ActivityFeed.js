@@ -7,8 +7,7 @@ import {
     Trash2,
     Edit,
     UserPlus,
-    ArrowRight,
-    Layout
+    ArrowRight
 } from 'lucide-react';
 import { formatDistanceToNow } from 'date-fns';
 
