@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { tasksAPI } from '../../services/api';
+import { tasksAPI, API_BASE_URL } from '../../services/api';
 import { Paperclip, File as FileIcon, Download, Image as ImageIcon } from 'lucide-react';
 import { formatDistanceToNow } from 'date-fns';
 import toast from 'react-hot-toast';
@@ -105,7 +105,7 @@ export const AttachmentSection = ({ taskId }) => {
                                 <div className="min-w-0">
                                     <p className="text-sm font-medium text-gray-900 dark:text-white truncate">
                                         <a
-                                            href={`http://localhost:8000${file.file_path}`}
+                                            href={`${API_BASE_URL}${file.file_path}`}
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             className="hover:underline"
@@ -120,7 +120,7 @@ export const AttachmentSection = ({ taskId }) => {
                             </div>
                             <div className="flex-shrink-0 ml-2">
                                 <a
-                                    href={`http://localhost:8000${file.file_path}`}
+                                    href={`${API_BASE_URL}${file.file_path}`}
                                     download={file.filename} // 'download' attribute only works for same-origin or if headers allow
                                     target="_blank"
                                     rel="noopener noreferrer"
